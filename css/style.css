@@ -1782,7 +1782,7 @@ h1, h2, h3, h4, h5, h6{
 
 .btn-news{
     background: #3db23c ;
-    margin-top: 80px;
+    margin-top: 30px;
     padding: 15px 60px;
     font-size: 20px;
     color: #fff;
@@ -1802,7 +1802,7 @@ h1, h2, h3, h4, h5, h6{
             text-align:center;
             padding:10px 5px;
             position:fixed;
-            bottom:10px; /* РѕС‚СЃС‚СѓРї РєРЅРѕРїРєРё РѕС‚ РЅРёР¶РЅРµРіРѕ РєСЂР°СЏ СЃС‚СЂР°РЅРёС†С‹*/
+            bottom:10px; /* отступ кнопки от нижнего края страницы*/
             right:10px;
             cursor:pointer;
             display:none;
