@@ -8,7 +8,6 @@
         margin-bottom: 20px;
         margin-top: 10px;
     }
-
     .responsive-header  {
         width: 100%;
         text-align: center;
@@ -110,7 +109,9 @@
     .responsive-header a {
         text-align: center;
         float: none;
+        font-size: 13px;
     }
+
 
     .logo {
 /*        margin-top: 10px;*/
@@ -204,6 +205,9 @@
      margin-left: 20px;
 /*     padding-top: 10px;*/
  }
+        .responsive-header a {
+            font-size: 15px;
+        }
     .navbar-toggle{
         display: block;
         margin-top: 30px;
@@ -290,7 +294,7 @@
     }
 
     .logo {
-        margin: 10px 0 0 10px;
+        margin: 0;
     }
 
     #top-bar {
@@ -467,7 +471,7 @@
     }
 
     .navbar-toggle {
-        margin-top: 15px;
+        margin-top: 25px;
     }
 
     .single-blog iframe {

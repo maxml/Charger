@@ -52,7 +52,7 @@ p {
 /*header*/
 
 .logo  {
-    margin-top: 20px;
+    margin-top: -10px;
     display: inline-block;
     padding: 0;
 }
@@ -1798,7 +1798,7 @@ h1, h2, h3, h4, h5, h6{
 
 #toTop{
             width:50px;
-            background:#516271;
+            background:#615d59;
             text-align:center;
             padding:10px 5px;
             position:fixed;
@@ -1808,4 +1808,11 @@ h1, h2, h3, h4, h5, h6{
             display:none;
             color:#fff;
             border-radius: 10px;
+}
+.contacts{
+    margin-left: 10px;
+    color: #4e4c46;
+}
+.contacts:hover{
+    color: #4e4c46;
 }
