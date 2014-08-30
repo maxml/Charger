@@ -39,7 +39,7 @@ BUILD YOUR OWN MODULES, BUT THIS IS NOT A SUPPORTED DOCUMENT.
 
 
 /***********************
-	-	FEATURE LIST 	-
+        -	FEATURE LIST 	-
 ***********************/
 
 
@@ -47,7 +47,7 @@ BUILD YOUR OWN MODULES, BUT THIS IS NOT A SUPPORTED DOCUMENT.
 
 
 /************************************************************
-	-	DEMO SETTINGS -
+        -	DEMO SETTINGS -
 ************************************************************/
 
 .previewheader			{	position:relative; z-index:2;}
@@ -59,9 +59,9 @@ BUILD YOUR OWN MODULES, BUT THIS IS NOT A SUPPORTED DOCUMENT.
 .topbutton,
 .topbutton a,
 .topbutton a:visited	{	float:left; padding:0px 15px 0px 40px; color:#fff; line-height:50px;
-							font-size:17px; font-family: 'Open Sans', sans-serif; font-weight:700;
-							cursor:pointer; opacity: 0.5;
-						}
+                       font-size:17px; font-family: 'Open Sans', sans-serif; font-weight:700;
+                       cursor:pointer; opacity: 0.5;
+}
 
 .topbutton.i-image		{	background:url(../images/tiles/image.png) no-repeat 15px center;}
 .topbutton.i-media		{	background:url(../images/tiles/media.png) no-repeat 15px center;}
@@ -112,70 +112,70 @@ strong					{	font-weight:400;}
 .opener.active		{	background:url(../images/tiles/closer.png) no-repeat center;  width:33px; height:33px; }
 
 @media only screen and (max-width: 1020px) {
-	  .givetry	{	visibility:hidden;}
+    .givetry	{	visibility:hidden;}
 
-	}
+}
 
 @media only screen and (max-width: 610px) {
-	  .megatitle	{	text-align: left;width:300px;margin-left:30px;}
+    .megatitle	{	text-align: left;width:300px;margin-left:30px;}
 
-	}
+}
 
 @media only screen and (max-width: 1170px) {
-		.group-8			{	clear:left;}
-	}
+    .group-8			{	clear:left;}
+}
 
 .switcher		{	padding:0px 30px;  max-width:1170px; margin:auto;
-					box-sizing:border-box;
-					-moz-box-sizing:border-box;
-					-webkit-box-sizing:border-box;
-					display:none;
-				 }
+             box-sizing:border-box;
+             -moz-box-sizing:border-box;
+             -webkit-box-sizing:border-box;
+             display:none;
+}
 .divider		{	height:0px; max-width:1170px;margin:auto;border-top:2px solid rgba(0,0,0,0.1);border-bottom:2px solid rgba(255,255,255,0.15);}
 
 
 .switcher .buttontitle	{	text-align:left; font-size:13px !important; color:rgba(0,0,0,0.5); font-weight:bold; margin-bottom:8px; font-family: 'Open Sans', sans-serif;text-transform:uppercase;}
 
 .switcher .button 		{ font-size:14px; color:#fff; background-color:#000; background-color:rgba(0,0,0,0.5); font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;
-						  border:none;
-						  border-radius:25px;
-						  -moz-border-radius:25px;
-						  -webkit-border-radius:25px;
-						  padding:5px 10px;
-						  text-shadow:none;
-						  float:left;
-						  margin-right:5px;
-						 }
+                      border:none;
+                      border-radius:25px;
+                      -moz-border-radius:25px;
+                      -webkit-border-radius:25px;
+                      padding:5px 10px;
+                      text-shadow:none;
+                      float:left;
+                      margin-right:5px;
+}
 
 
 .switcher .pad_wrap,
 .addmore				{	background: #7F7F7F;
-							border: none;
-							padding: 4px 10px 4px 10px;
-							font-size:14px; color:#fff; background-color:rgba(0,0,0,0.5);; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;
-							border-radius:25px;
-							-moz-border-radius:25px;
-							-webkit-border-radius:25px; float:left;margin-right:10px;
-						}
+              border: none;
+              padding: 4px 10px 4px 10px;
+              font-size:14px; color:#fff; background-color:rgba(0,0,0,0.5);; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;
+              border-radius:25px;
+              -moz-border-radius:25px;
+              -webkit-border-radius:25px; float:left;margin-right:10px;
+}
 .addmore				{	cursor: pointer; margin:auto; width:160px; position: relative; float:none;}
 
 .switcher .pad			{	background:none;border:none;float:left;width:20px; text-align:right; padding:0;
-							font-size:14px; color:#fff; background-color:transparent; font-weight:600;  font-family: 'Open Sans', sans-serif;
-							padding: 0px 5px 0px 0px;
-						}
+                   font-size:14px; color:#fff; background-color:transparent; font-weight:600;  font-family: 'Open Sans', sans-serif;
+                   padding: 0px 5px 0px 0px;
+}
 .switcher .longer .pad		{	width:35px;}
 .switcher .pxc			{	font-size:14px; color:#fff; background-color:transparent; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;line-height:18px;}
 .switcher .colorv		{	font-size:14px; color:#fff; background-color:transparent; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;line-height:22px;}
 
 .switcher .color_wrap		{	background: rgba(0,0,0,0.5);;
-							border: none;
-							width:42px;
-							padding: 3px 10px;
-							font-size:14px; color:#fff; background-color:rgba(0,0,0,0.5);; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;
-							border-radius:25px;
-						  -moz-border-radius:25px;
-						  -webkit-border-radius:25px; float:left;margin-right:10px;
-						}
+                         border: none;
+                         width:42px;
+                         padding: 3px 10px;
+                         font-size:14px; color:#fff; background-color:rgba(0,0,0,0.5);; font-weight:600; margin-bottom:15px; font-family: 'Open Sans', sans-serif;
+                         border-radius:25px;
+                         -moz-border-radius:25px;
+                         -webkit-border-radius:25px; float:left;margin-right:10px;
+}
 
 
 
@@ -203,9 +203,9 @@ strong					{	font-weight:400;}
 .ie8 .group-6			{	width:260px}
 
 @media only screen and (max-width: 1180px) {
-		.group-5	{	clear:left;}
+    .group-5	{	clear:left;}
 
-	}
+}
 
 .colorpicker				{	z-index:1000;}
 #color-Selector div			{	background:none;width:0px;height:0px;  float:left;}
