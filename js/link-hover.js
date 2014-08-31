@@ -1,34 +1,34 @@
 ;
-(function($, window, document, undefined) {
+(function ($, window, document, undefined) {
     var pluginName = 'mateHover',
-            defaults = {
-                autoSize: 'off',
-                inhiritPadding: 'on',
-                position: 'y',
-                overlayStyle: 'classic',
-                rollingPosition: 'top',
-                doublePosition: 'vertical',
-                fourSpeedIn0: 200,
-                fourSpeedOut0: 200,
-                fourSpeedIn1: 800,
-                fourSpeedOut1: 800,
-                fourSpeedIn2: 300,
-                fourSpeedOut2: 300,
-                fourSpeedIn3: 800,
-                fourSpeedOut3: 800,
-                overlayBg: '#000',
-                overlaySpeedIn: 500,
-                overlaySpeedOut: 500,
-                overlayOpacity: 0.4,
-                overlayEasing: 'linear',
-                popupSpeedIn: 1000,
-                popupSpeedOut: 500,
-                popupEasing: 'swing',
-                between: 10,
-                popup2SpeedIn: 800,
-                popup2SpeedOut: 800,
-                popup2Easing: 'swing'
-            };
+        defaults = {
+            autoSize: 'off',
+            inhiritPadding: 'on',
+            position: 'y',
+            overlayStyle: 'classic',
+            rollingPosition: 'top',
+            doublePosition: 'vertical',
+            fourSpeedIn0: 200,
+            fourSpeedOut0: 200,
+            fourSpeedIn1: 800,
+            fourSpeedOut1: 800,
+            fourSpeedIn2: 300,
+            fourSpeedOut2: 300,
+            fourSpeedIn3: 800,
+            fourSpeedOut3: 800,
+            overlayBg: '#000',
+            overlaySpeedIn: 500,
+            overlaySpeedOut: 500,
+            overlayOpacity: 0.4,
+            overlayEasing: 'linear',
+            popupSpeedIn: 1000,
+            popupSpeedOut: 500,
+            popupEasing: 'swing',
+            between: 10,
+            popup2SpeedIn: 800,
+            popup2SpeedOut: 800,
+            popup2Easing: 'swing'
+        };
 
     function Mate(element, options) {
         this.element = $(element);
@@ -37,9 +37,8 @@
         this._defaults = defaults;
         this._name = pluginName;
         this.init(ele)
-    }
-    ;
-    Mate.prototype.onResize = function() {
+    };
+    Mate.prototype.onResize = function () {
         var ele = this;
         this.img = this.element.children('img');
         this.popup = this.element.find('[data-zl-popup]');
@@ -50,16 +49,14 @@
                 'width': this.imgWidth,
                 'height': this.imgHeight
             })
-        }
-        ;
+        };
         if (this.options.inhiritPadding === 'on') {
             this.divWidth = this.element.innerWidth();
             this.divHeight = this.element.innerHeight()
         } else {
             this.divWidth = this.element.width();
             this.divHeight = this.element.height()
-        }
-        ;
+        };
         this.calDivWidth = this.divWidth * 2;
         this.calDivHeight = this.divHeight * 2;
         this.divCalWidth = this.divWidth / 2;
@@ -90,8 +87,7 @@
             this.coor1H = this.divCalHeight - this.popup1Height / 2;
             this.coor2W = this.divCalWidth - this.popup2Width / 2 - this.popup1Width / 2 - this.options.between;
             this.coor2H = this.divCalHeight - this.popup2Height / 2
-        }
-        ;
+        };
         this.over_pos = {
             plus: {},
             minus: {}
@@ -137,9 +133,7 @@
             this.over_double_pos.fly_coor.bottom_right['right'] = 0;
             this.over_fly_out.fly_coor.top_left['left'] = -this.divWidth;
             this.over_fly_out.fly_coor.bottom_right['right'] = -this.divWidth
-        }
-        ;
-        if (this.options.overlayStyle === 'four') {
+        }; if (this.options.overlayStyle === 'four') {
             this.over_four = {
                 inn: {},
                 out: {}
@@ -148,8 +142,7 @@
                 this.over_four.inn['speed' + speed_count_inout] = this.options['fourSpeedIn' + speed_count_inout];
                 this.over_four.out['speed' + speed_count_inout] = this.options['fourSpeedOut' + speed_count_inout]
             }
-        }
-        ;
+        };
         switch (this.options.position) {
             case 'y':
                 this.startPosition('y', this.count_pop_label);
@@ -178,8 +171,7 @@
             default:
                 console.log('Wrong position properties(START POPUP POSITION)');
                 break
-        }
-        ;
+        };
         this.pos = {};
         switch (this.options.position) {
             case 'y':
@@ -209,8 +201,7 @@
             default:
                 console.log('Wrong position properties(FLY POPUP POSITION)');
                 break
-        }
-        ;
+        };
         var general_overlay, left_or_top, left_or_top_double;
         (this.options.rollingPosition === 'top' || this.options.rollingPosition === 'bottom') ? left_or_top = 'left' : left_or_top = 'top';
         (this.options.doublePosition === 'vertical') ? left_or_top_double = 'left' : left_or_top_double = 'top';
@@ -228,8 +219,7 @@
                         'left': this.divCalWidth2 * overlay_count
                     }).fadeTo(100, this.options.overlayOpacity);
                     ele.element.prepend(general_overlay)
-                }
-                ;
+                };
                 break;
             case 'rolling':
                 general_overlay = $('<div data-zl-ovrolling="zl_overlay_' + ele.element.attr('data-zlname') + '" style="background:' + ele.options.overlayBg + ';' + left_or_top + ':0;"></div>').css(this.over_pos.plus).fadeTo(100, this.options.overlayOpacity);
@@ -239,12 +229,11 @@
                 for (var overlay_count_d = 0; overlay_count_d <= 1; overlay_count_d++) {
                     general_overlay = $('<div data-zl-ovdouble' + overlay_count_d + '="zl_overlay_' + ele.element.attr('data-zlname') + '" style="background:' + ele.options.overlayBg + ';' + left_or_top_double + ':0;"></div>').css(this.over_double_pos['position' + overlay_count_d]).fadeTo(100, this.options.overlayOpacity);
                     ele.element.prepend(general_overlay)
-                }
-                ;
+                };
                 break
         }
     };
-    Mate.prototype.startPosition = function(x_or_y, count_pop_label) {
+    Mate.prototype.startPosition = function (x_or_y, count_pop_label) {
         if (x_or_y === 'y' && count_pop_label === 0 || x_or_y === 'y+i' && count_pop_label === 0) {
             this.popup.css({
                 'left': this.coorW,
@@ -303,7 +292,7 @@
             })
         }
     };
-    Mate.prototype.flyPosition = function(x_or_y, count_pop_label) {
+    Mate.prototype.flyPosition = function (x_or_y, count_pop_label) {
         if (x_or_y === 'y' && count_pop_label === 0) {
             this.pos.anime_enter = {
                 top: this.coorH
@@ -514,7 +503,7 @@
             }
         }
     };
-    Mate.prototype.overlayGet = function(ele, overlayStyle, speed, opacity, over_pos) {
+    Mate.prototype.overlayGet = function (ele, overlayStyle, speed, opacity, over_pos) {
         switch (overlayStyle) {
             case 'classic':
                 ele.element.children('[data-zl-overlay]').stop(true).fadeTo(speed, opacity, ele.options.overlayEasing);
@@ -526,8 +515,7 @@
                         top: over_pos
                     }, speed[obj_proper], ele.options.overlayEasing);
                     obj_count++
-                }
-                ;
+                };
                 break;
             case 'rolling':
                 ele.element.children('[data-zl-ovrolling]').css('display', 'block').stop(true).animate(over_pos, speed, ele.options.overlayEasing);
@@ -538,9 +526,9 @@
                 break
         }
     };
-    Mate.prototype.hover = function(ele, count_pop_label) {
+    Mate.prototype.hover = function (ele, count_pop_label) {
         this.element.on({
-            mouseenter: function() {
+            mouseenter: function () {
                 switch (count_pop_label) {
                     case 0:
                         ele.popup.css(ele.pos.back_css).css('display', 'block').stop(true).animate(ele.pos.anime_enter, ele.options.popupSpeedIn, ele.options.popupEasing);
@@ -557,8 +545,7 @@
                             case 'double':
                                 ele.overlayGet(ele, 'double', ele.options.overlaySpeedIn, ele.options.overlayOpacity, ele.over_double_pos.fly_coor);
                                 break
-                        }
-                        ;
+                        };
                         break;
                     case 1:
                         ele.popup1.css(ele.pos.back_css).css('display', 'block').stop(true).animate(ele.pos.anime_enter, ele.options.popupSpeedIn, ele.options.popupEasing).siblings('[data-zl-popup]').css(ele.pos.back_css2).css('display', 'block').stop(true).animate(ele.pos.anime_enter2, ele.options.popup2SpeedIn, ele.options.popup2Easing);
@@ -575,12 +562,11 @@
                             case 'double':
                                 ele.overlayGet(ele, 'double', ele.options.overlaySpeedIn, ele.options.overlayOpacity, ele.over_double_pos.fly_coor);
                                 break
-                        }
-                        ;
+                        };
                         break
                 }
             },
-            mouseleave: function() {
+            mouseleave: function () {
                 switch (count_pop_label) {
                     case 0:
                         ele.popup.stop(true).animate(ele.pos.anime_leave, ele.options.popupSpeedOut, ele.options.popupEasing).children('input').blur();
@@ -597,8 +583,7 @@
                             case 'double':
                                 ele.overlayGet(ele, 'double', ele.options.overlaySpeedOut, 0, ele.over_fly_out.fly_coor);
                                 break
-                        }
-                        ;
+                        };
                         break;
                     case 1:
                         ele.popup1.stop(true, true).animate(ele.pos.anime_leave, ele.options.popupSpeedOut, ele.options.popupEasing).children('input').blur().end().siblings('[data-zl-popup]').stop(true, true).animate(ele.pos.anime_leave2, ele.options.popup2SpeedOut, ele.options.popup2Easing).children('input').blur();
@@ -615,20 +600,19 @@
                             case 'double':
                                 ele.overlayGet(ele, 'double', ele.options.overlaySpeedOut, 0, ele.over_fly_out.fly_coor);
                                 break
-                        }
-                        ;
+                        };
                         break
                 }
             }
         })
     };
-    Mate.prototype.init = function(ele) {
+    Mate.prototype.init = function (ele) {
         $(window).resize($.proxy(this, 'onResize'));
         this.onResize();
         this.hover(ele, this.count_pop_label)
     };
-    $.fn[pluginName] = function(options) {
-        return this.each(function() {
+    $.fn[pluginName] = function (options) {
+        return this.each(function () {
             if (!$.data(this, 'plugin_' + pluginName)) {
                 $.data(this, 'plugin_' + pluginName, new Mate(this, options))
             }

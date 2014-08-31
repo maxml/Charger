@@ -52,7 +52,7 @@ p {
 /*header*/
 
 .logo  {
-    margin-top: -10px;
+/*    margin-top: -10px;*/
     display: inline-block;
     padding: 0;
 }
@@ -79,6 +79,8 @@ p {
     margin-top: 50px;
     font-size: 13px;
     font-style: italic;
+/*    margin-top: -20px;*/
+/*    margin-right: -80px;*/
 }
 
 #top-bar .navbar {
@@ -233,7 +235,7 @@ a.btn-tour:hover, a.btn-tour:focus {
     color: #32394a  ;
     font-family: 'Roboto', sans-serif;
 
-
+    
 }
 
 .blue-color {
@@ -523,7 +525,7 @@ a.btn-tour:hover, a.btn-tour:focus {
 }
 
 .about-details {
-
+    
     width: 100%;
     min-height: 317px;
     margin-top: 50px;
@@ -569,10 +571,10 @@ a.btn-tour:hover, a.btn-tour:focus {
 }
 
 .team-info-details {
-    /*
-        position: absolute;
-        top: 70px;
-    */
+/*
+    position: absolute;
+    top: 70px;
+*/
 }
 .team-info-details h1 {
     color: #19bfb9;
@@ -591,9 +593,9 @@ a.btn-tour:hover, a.btn-tour:focus {
 
 ul.team-social-link {
     float: left;
-    /*    width: 100%;*/
+/*    width: 100%;*/
     text-align: right;
-    /*    margin-top: 50px;*/
+/*    margin-top: 50px;*/
 }
 
 ul.team-social-link li {
@@ -615,7 +617,7 @@ ul.team-social-link li a:hover {
 .team-row{
     width:100%;
     overflow: hidden;
-    /*    padding-bottom: 120px*/
+/*    padding-bottom: 120px*/
 }
 
 .team-container{
@@ -704,7 +706,7 @@ ul.team-social-link li a:hover {
 }
 
 .new-desk {
-    /*    border-right: 1px solid #e5e5e5;*/
+/*    border-right: 1px solid #e5e5e5;*/
     width: 80%;
     margin-top: 12px;
 }
@@ -1462,6 +1464,7 @@ ul.social-links li a:hover{
     opacity: 1 !important;
     top: -3px;
     transition: opacity 0.3s ease-out 0s;
+    min-width: 90px;
 }
 #timeline .link a {
     color: #d1d3d4;
@@ -1475,6 +1478,7 @@ ul.social-links li a:hover{
     text-decoration: none;
     top: -3px;
     transition: opacity 0.3s ease-out 0s;
+    min-width: 90px;
 }
 
 .link-dot-position-1 {
@@ -1534,21 +1538,21 @@ ul.social-links li a:hover{
 
 
 h1, h2, h3, h4, h5, h6{
-
+    
     font-family: 'Lato', sans-serif;
 }
 
 #qLpercentage{ color: #f07663 !important;   font-family: 'Lato', sans-serif; }
 .animated {
-    -webkit-animation-fill-mode:both;
-    -moz-animation-fill-mode:both;
-    -ms-animation-fill-mode:both;
-    -o-animation-fill-mode:both;
-    animation-fill-mode:both;
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+	animation-fill-mode:both;
 
-    -webkit-animation-delay: .3s;
-    -moz-animation-delay: .3s;
-    animation-delay: .3s;
+	-webkit-animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	animation-delay: .3s;
 }
 
 .portfolio-filter{ text-align: center;}
@@ -1622,48 +1626,48 @@ h1, h2, h3, h4, h5, h6{
 
 
 .spinner {
-    border: 2px solid #eeeeee;
-    font-size: 40px;
-    width: 1em;
-    height: 1em;
-    border-radius: .5em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-    border-top-color: red;
+  border: 2px solid #eeeeee;
+  font-size: 40px;
+  width: 1em;
+  height: 1em;
+  border-radius: .5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top-color: red;
 }
 
 @-webkit-keyframes spin {
-    to {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @-moz-keyframes spin {
-    to {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-    to {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -1782,7 +1786,7 @@ h1, h2, h3, h4, h5, h6{
 
 .btn-news{
     background: #3db23c ;
-    margin-top: 30px;
+    margin-top: 80px;
     padding: 15px 60px;
     font-size: 20px;
     color: #fff;
@@ -1797,17 +1801,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #toTop{
-    width:50px;
-    background:#615d59;
-    text-align:center;
-    padding:10px 5px;
-    position:fixed;
-    bottom:10px; /* ������ ������ �� ������� ���� ��������*/
-    right:10px;
-    cursor:pointer;
-    display:none;
-    color:#fff;
-    border-radius: 10px;
+            width:50px;
+            background:#615d59;
+            text-align:center;
+            padding:10px 5px;
+            position:fixed;
+            bottom:10px; /* отступ кнопки от нижнего края страницы*/
+            right:10px;
+            cursor:pointer;
+            display:none;
+            color:#fff;
+            border-radius: 10px;
 }
 .contacts{
     margin-left: 10px;
@@ -1815,4 +1819,19 @@ h1, h2, h3, h4, h5, h6{
 }
 .contacts:hover{
     color: #4e4c46;
+}
+.contacts_bl{
+    margin-left: auto;
+    margin-top: 50px;
+/*    width: 200px;*/
+}
+.contacts_bl:before,
+.contacts:before{
+    display: block;
+    float: left;
+    content: "";
+    background: url(../img/phone-icon.png);
+    height: 26px;
+    width: 26px;
+    margin-right: 5px;
 }

@@ -1,5 +1,4 @@
-;
-(function($) {
+;(function ($) {
     // Namespace all events.
     var eventNamespace = 'waitForImages';
 
@@ -9,7 +8,7 @@
     };
 
     // Custom selector to find `img` elements that have a valid `src` attribute and have not already loaded.
-    $.expr[':'].uncached = function(obj) {
+    $.expr[':'].uncached = function (obj) {
         // Ensure we are dealing with an `img` element with a valid `src` attribute.
         if (!$(obj).is('img[src!=""]')) {
             return false;
@@ -22,7 +21,7 @@
         return !img.complete;
     };
 
-    $.fn.waitForImages = function(finishedCallback, eachCallback, waitForAll) {
+    $.fn.waitForImages = function (finishedCallback, eachCallback, waitForAll) {
 
         var allImgsLength = 0;
         var allImgsLoaded = 0;
@@ -41,14 +40,14 @@
         eachCallback = eachCallback || $.noop;
 
         // Convert waitForAll to Boolean
-        waitForAll = !!waitForAll;
+        waitForAll = !! waitForAll;
 
         // Ensure callbacks are functions.
         if (!$.isFunction(finishedCallback) || !$.isFunction(eachCallback)) {
             throw new TypeError('An invalid callback was supplied.');
         }
 
-        return this.each(function() {
+        return this.each(function () {
             // Build a list of all imgs, dependent on what images will be considered.
             var obj = $(this);
             var allImgs = [];
@@ -61,7 +60,7 @@
             if (waitForAll) {
 
                 // Get all elements (including the original), as any one of them could have a background image.
-                obj.find('*').addBack().each(function() {
+                obj.find('*').addBack().each(function () {
                     var element = $(this);
 
                     // If an `img` element, add it. But keep iterating in case it has a background image too.
@@ -72,7 +71,7 @@
                         });
                     }
 
-                    $.each(hasImgProperties, function(i, property) {
+                    $.each(hasImgProperties, function (i, property) {
                         var propertyValue = element.css(property);
                         var match;
 
@@ -93,12 +92,12 @@
             } else {
                 // For images only, the task is simpler.
                 obj.find('img:uncached')
-                        .each(function() {
-                            allImgs.push({
-                                src: this.src,
-                                element: this
-                            });
+                    .each(function () {
+                        allImgs.push({
+                            src: this.src,
+                            element: this
                         });
+                    });
             }
 
             allImgsLength = allImgs.length;
@@ -109,12 +108,12 @@
                 finishedCallback.call(obj[0]);
             }
 
-            $.each(allImgs, function(i, img) {
+            $.each(allImgs, function (i, img) {
 
                 var image = new Image();
 
                 // Handle the image loading and error with the same callback.
-                $(image).on('load.' + eventNamespace + ' error.' + eventNamespace, function(event) {
+                $(image).on('load.' + eventNamespace + ' error.' + eventNamespace, function (event) {
                     allImgsLoaded++;
 
                     // If an error occurred with loading the image, set the third argument accordingly.
