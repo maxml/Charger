@@ -926,7 +926,6 @@ ul.team-social-link li a:hover {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border: 2px solid #d13232;
 }
 
 .pricing-table.most-popular {
@@ -1838,4 +1837,20 @@ h1, h2, h3, h4, h5, h6{
 }
 .margin_top_30{
     margin-top: 30px;
+}
+#google{
+    background: #3db23c;
+    margin-top: 80px;
+    padding: 15px 60px;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
+    font-weight: 300;
+    min-width: 404px;
+}
+#price_gold{
+    border: 3px solid #d13232;
+    margin-top: 10px;
 }
